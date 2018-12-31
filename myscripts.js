@@ -1,3 +1,4 @@
+
 (function($, undefined) {
 
     "use strict";
@@ -57,3 +58,19 @@
         
     });
 })(jQuery);
+
+
+
+$(document).ready(function(){
+    $('.btn').attr('disabled',true);
+    
+    $('#amount').keyup(function(){
+        if($(this).val().length !=0){
+            $('.btn').attr('disabled', false);
+        }
+        else
+        {
+            $('.btn').attr('disabled', true);        
+        }
+    })
+});
